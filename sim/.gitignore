@@ -1,0 +1,4 @@
+*.vcd
+*.sim
+gen_sim
+sim
