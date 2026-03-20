@@ -1,1 +1,1 @@
-# Smith-Waterman-Systolic-array-
+# Smith-Waterman-Systolic-array

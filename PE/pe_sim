@@ -1,0 +1,188 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002221609e1d0 .scope module, "PE_check" "PE_check" 2 3;
+ .timescale -9 -12;
+P_000002221609c660 .param/l "CLK_PERIOD" 0 2 5, +C4<00000000000000000000000000001010>;
+P_000002221609c698 .param/l "n" 0 2 4, +C4<00000000000000000000000000000011>;
+v0000022216104050_0 .var/s "E_in", 3 0;
+v00000222161051d0_0 .var/s "F_in", 3 0;
+v00000222161047d0_0 .var/s "G_in", 3 0;
+v00000222161045f0_0 .net/s "H_out", 3 0, v00000222160a2bd0_0;  1 drivers
+v0000022216103d30_0 .var "S_in", 2 0;
+v0000022216104eb0_0 .net "S_out", 2 0, v00000222160a28b0_0;  1 drivers
+v0000022216103dd0_0 .var "clk", 0 0;
+S_000002221609d880 .scope module, "dut" "PE" 2 13, 3 1 0, S_000002221609e1d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 4 "E_in";
+    .port_info 2 /INPUT 4 "F_in";
+    .port_info 3 /INPUT 4 "G_in";
+    .port_info 4 /INPUT 3 "S_in";
+    .port_info 5 /OUTPUT 4 "H_out";
+    .port_info 6 /OUTPUT 3 "S_out";
+P_00000222160996a0 .param/l "Q_pe" 0 3 3, +C4<00000000000000000000000000000010>;
+P_00000222160996d8 .param/l "loss" 0 3 6, +C4<11111111111111111111111111111111>;
+P_0000022216099710 .param/l "match" 0 3 4, +C4<00000000000000000000000000000010>;
+P_0000022216099748 .param/l "mismatch" 0 3 5, +C4<11111111111111111111111111111111>;
+P_0000022216099780 .param/l "n" 0 3 2, +C4<00000000000000000000000000000011>;
+L_00000222160ae300 .functor AND 1, L_0000022216105270, L_0000022216104b90, C4<1>, C4<1>;
+v00000222160a26d0_0 .net/s "E_in", 3 0, v0000022216104050_0;  1 drivers
+v00000222160a3490_0 .net/s "E_temp", 3 0, L_0000022216103fb0;  1 drivers
+v00000222160a2b30_0 .net/s "F_in", 3 0, v00000222161051d0_0;  1 drivers
+v00000222160a29f0_0 .net/s "F_temp", 3 0, L_0000022216104370;  1 drivers
+v00000222160a2770_0 .net/s "G_in", 3 0, v00000222161047d0_0;  1 drivers
+v00000222160a3170_0 .net/s "G_temp", 3 0, L_0000022216103c90;  1 drivers
+v00000222160a2bd0_0 .var/s "H_out", 3 0;
+v00000222160a32b0_0 .net/s "H_temp", 3 0, L_0000022216104ff0;  1 drivers
+v00000222160a2810_0 .net "S_in", 2 0, v0000022216103d30_0;  1 drivers
+v00000222160a28b0_0 .var "S_out", 2 0;
+v00000222160a3210_0 .net/s *"_ivl_0", 31 0, L_0000022216103e70;  1 drivers
+L_00000222161060f0 .functor BUFT 1, C4<11111111111111111111111111111111>, C4<0>, C4<0>, C4<0>;
+v00000222160a2e50_0 .net/2s *"_ivl_10", 31 0, L_00000222161060f0;  1 drivers
+v00000222160a2950_0 .net/s *"_ivl_12", 31 0, L_0000022216104af0;  1 drivers
+L_0000022216106138 .functor BUFT 1, C4<00000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v00000222160a2630_0 .net/2u *"_ivl_16", 31 0, L_0000022216106138;  1 drivers
+v00000222160a3530_0 .net *"_ivl_18", 31 0, L_0000022216105310;  1 drivers
+L_00000222161060a8 .functor BUFT 1, C4<11111111111111111111111111111111>, C4<0>, C4<0>, C4<0>;
+v00000222160a2a90_0 .net/2s *"_ivl_2", 31 0, L_00000222161060a8;  1 drivers
+L_0000022216106180 .functor BUFT 1, C4<00000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v00000222160a3030_0 .net *"_ivl_21", 28 0, L_0000022216106180;  1 drivers
+v00000222160a2c70_0 .net *"_ivl_22", 0 0, L_00000222161042d0;  1 drivers
+v00000222160a2f90_0 .net/s *"_ivl_24", 31 0, L_0000022216103b50;  1 drivers
+L_00000222161061c8 .functor BUFT 1, C4<00000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v00000222160a3350_0 .net/2s *"_ivl_26", 31 0, L_00000222161061c8;  1 drivers
+v00000222160a2d10_0 .net/s *"_ivl_28", 31 0, L_0000022216103970;  1 drivers
+v00000222160a33f0_0 .net/s *"_ivl_30", 31 0, L_00000222161038d0;  1 drivers
+L_0000022216106210 .functor BUFT 1, C4<11111111111111111111111111111111>, C4<0>, C4<0>, C4<0>;
+v00000222160a2db0_0 .net/2s *"_ivl_32", 31 0, L_0000022216106210;  1 drivers
+v00000222160a30d0_0 .net/s *"_ivl_34", 31 0, L_00000222161040f0;  1 drivers
+v00000222160a2ef0_0 .net *"_ivl_36", 31 0, L_0000022216103f10;  1 drivers
+v0000022216105450_0 .net/s *"_ivl_4", 31 0, L_0000022216104870;  1 drivers
+v0000022216104d70_0 .net *"_ivl_40", 0 0, L_0000022216105270;  1 drivers
+v0000022216104550_0 .net *"_ivl_42", 0 0, L_0000022216104b90;  1 drivers
+v0000022216104e10_0 .net *"_ivl_45", 0 0, L_00000222160ae300;  1 drivers
+v0000022216104cd0_0 .net *"_ivl_46", 0 0, L_00000222161053b0;  1 drivers
+v0000022216105130_0 .net *"_ivl_48", 3 0, L_0000022216103ab0;  1 drivers
+v0000022216104f50_0 .net/s *"_ivl_8", 31 0, L_0000022216103a10;  1 drivers
+v00000222161049b0_0 .net "clk", 0 0, v0000022216103dd0_0;  1 drivers
+E_000002221609bb60 .event negedge, v00000222161049b0_0;
+L_0000022216103e70 .extend/s 32, v0000022216104050_0;
+L_0000022216104870 .arith/sum 32, L_0000022216103e70, L_00000222161060a8;
+L_0000022216103fb0 .part L_0000022216104870, 0, 4;
+L_0000022216103a10 .extend/s 32, v00000222161051d0_0;
+L_0000022216104af0 .arith/sum 32, L_0000022216103a10, L_00000222161060f0;
+L_0000022216104370 .part L_0000022216104af0, 0, 4;
+L_0000022216105310 .concat [ 3 29 0 0], v0000022216103d30_0, L_0000022216106180;
+L_00000222161042d0 .cmp/eq 32, L_0000022216106138, L_0000022216105310;
+L_0000022216103b50 .extend/s 32, v00000222161047d0_0;
+L_0000022216103970 .arith/sum 32, L_0000022216103b50, L_00000222161061c8;
+L_00000222161038d0 .extend/s 32, v00000222161047d0_0;
+L_00000222161040f0 .arith/sum 32, L_00000222161038d0, L_0000022216106210;
+L_0000022216103f10 .functor MUXZ 32, L_00000222161040f0, L_0000022216103970, L_00000222161042d0, C4<>;
+L_0000022216103c90 .part L_0000022216103f10, 0, 4;
+L_0000022216105270 .cmp/gt.s 4, L_0000022216103fb0, L_0000022216104370;
+L_0000022216104b90 .cmp/gt.s 4, L_0000022216103fb0, L_0000022216103c90;
+L_00000222161053b0 .cmp/gt.s 4, L_0000022216104370, L_0000022216103c90;
+L_0000022216103ab0 .functor MUXZ 4, L_0000022216103c90, L_0000022216104370, L_00000222161053b0, C4<>;
+L_0000022216104ff0 .functor MUXZ 4, L_0000022216103ab0, L_0000022216103fb0, L_00000222160ae300, C4<>;
+    .scope S_000002221609d880;
+T_0 ;
+    %wait E_000002221609bb60;
+    %load/vec4 v00000222160a2810_0;
+    %assign/vec4 v00000222160a28b0_0, 0;
+    %load/vec4 v00000222160a32b0_0;
+    %pad/s 32;
+    %cmpi/s 0, 0, 32;
+    %jmp/0xz  T_0.0, 5;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v00000222160a2bd0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000222160a32b0_0;
+    %assign/vec4 v00000222160a2bd0_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_000002221609e1d0;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000022216103dd0_0, 0, 1;
+T_1.0 ;
+    %delay 5000, 0;
+    %load/vec4 v0000022216103dd0_0;
+    %inv;
+    %store/vec4 v0000022216103dd0_0, 0, 1;
+    %jmp T_1.0;
+    %end;
+    .thread T_1;
+    .scope S_000002221609e1d0;
+T_2 ;
+    %vpi_call 2 24 "$dumpfile", "PE_check.vcd" {0 0 0};
+    %vpi_call 2 25 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002221609e1d0 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000022216104050_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161051d0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161047d0_0, 0, 4;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0000022216103d30_0, 0, 3;
+    %vpi_call 2 30 "$display", "\012=== PE Logic Test (n=3) ===" {0 0 0};
+    %vpi_call 2 33 "$display", "Test 1: Match (S_in=2, Q_pe=2)" {0 0 0};
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000222161047d0_0, 0, 4;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0000022216103d30_0, 0, 3;
+    %wait E_000002221609bb60;
+    %delay 1000, 0;
+    %vpi_call 2 36 "$display", "  Input: G_in=%0d, Match=+2 | Output: H_out=%0d (Expected: 3)", v00000222161047d0_0, v00000222161045f0_0 {0 0 0};
+    %vpi_call 2 39 "$display", "Test 2: Left Input High (E_in=5)" {0 0 0};
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0000022216104050_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161051d0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161047d0_0, 0, 4;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0000022216103d30_0, 0, 3;
+    %wait E_000002221609bb60;
+    %delay 1000, 0;
+    %vpi_call 2 42 "$display", "  Input: E_in=%0d, Loss=-1  | Output: H_out=%0d (Expected: 4)", v0000022216104050_0, v00000222161045f0_0 {0 0 0};
+    %load/vec4 v00000222161045f0_0;
+    %pad/s 32;
+    %cmpi/e 4, 0, 32;
+    %jmp/0xz  T_2.0, 4;
+    %vpi_call 2 43 "$display", "  RESULT: SUCCESS" {0 0 0};
+    %jmp T_2.1;
+T_2.0 ;
+    %vpi_call 2 44 "$display", "  RESULT: FAILURE - Still Overflowing!" {0 0 0};
+T_2.1 ;
+    %vpi_call 2 47 "$display", "Test 3: Clipping Negative" {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000022216104050_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161051d0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000222161047d0_0, 0, 4;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0000022216103d30_0, 0, 3;
+    %wait E_000002221609bb60;
+    %delay 1000, 0;
+    %vpi_call 2 50 "$display", "  Input: All 0, Mismatch | Output: H_out=%0d (Expected: 0)", v00000222161045f0_0 {0 0 0};
+    %vpi_call 2 52 "$display", "=== Simulation Complete ===\012" {0 0 0};
+    %vpi_call 2 53 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "PE_check.v";
+    "PE.v";

@@ -1,0 +1,47 @@
+$date
+	Sun Jan 18 12:29:52 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module booth_multiplier_tb $end
+$var wire 16 ! product [15:0] $end
+$var parameter 32 " n $end
+$var reg 8 # multiplicand [7:0] $end
+$var reg 8 $ multiplier [7:0] $end
+$scope module uut $end
+$var wire 8 % multiplicand [7:0] $end
+$var wire 8 & multiplier [7:0] $end
+$var parameter 32 ' n $end
+$var reg 16 ( AQ [15:0] $end
+$var reg 8 ) B [7:0] $end
+$var reg 1 * Q_1 $end
+$var reg 2 + check [1:0] $end
+$var reg 16 , product [15:0] $end
+$var integer 32 - k [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 '
+b1000 "
+$end
+#0
+$dumpvars
+b0 -
+b1111101100110111 ,
+b0 +
+0*
+b11100111 )
+b1111101100110111 (
+b110001 &
+b11100111 %
+b110001 $
+b11100111 #
+b1111101100110111 !
+$end
+#10000
