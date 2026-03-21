@@ -25,7 +25,7 @@ generate
                 .rst(rst),
                 .char_in(loaded_string[1:0]),
                 .E_in({(n+1){1'b0}}),
-                .F_in({(n+1){1'b0}}),
+                .F_in({(n+1){1'b0}}),  //fix because it takes 11 bit 0's
                 .G_in({(n+1){1'b0}}),
                 .S_in(S_char_in),
                 .H_curr(H_curr[i]),
