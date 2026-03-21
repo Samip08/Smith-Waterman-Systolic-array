@@ -1,6 +1,6 @@
 module Max #(
     parameter n = 10,
-    loaded_string_size = 4
+    parameter loaded_string_size = 4
 )(   
     input clk,
     input rst,
