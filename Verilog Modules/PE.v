@@ -1,5 +1,5 @@
 module PE #(
-    parameter n = 10,  //preferably larger to hold peak value(n=20)
+    parameter n = 20,  //preferably larger to hold peak value(n=20)
     parameter CHARWIDTH = 2, 
     parameter signed match = 2, 
     parameter signed mismatch = -1,

@@ -1,6 +1,6 @@
 module Genvar_wrapper #(
-    parameter n = 10, //preferably larger to hold peak value(n=20)
-    parameter loaded_string_size = 4 
+    parameter n = 20, //preferably larger to hold peak value(n=20)
+    parameter loaded_string_size = 100 
 )(
     input clk,
     input load,
