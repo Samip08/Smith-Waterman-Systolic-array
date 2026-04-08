@@ -22,23 +22,23 @@ The design follows a 1D systolic array paradigm where each **Processing Element 
 
 ```text
 helix-100/
-├── rtl/                        # Register Transfer Level Design
-│   ├── Top.v                   # System integration and FSM
-│   ├── PE.v                    # Smith-Waterman arithmetic core
-│   ├── Max.v                   # Peak score detection and indexing
-│   └── Genvar_wrapper.v        # Parameterized array instantiation
-├── tb/                         # Verification Environment
-│   ├── Top_tb.v                # System-level testbench
-│   └── mem/                    # Memory initialization files
-│       ├── seq1.mem            # Encoded query sequence (A:00, C:01, G:10, T:11)
-│       └── seq2.mem            # Encoded subject sequence
-├── reports/                    # Implementation Analysis
-│   ├── timing_report.png       # Static Timing Analysis (STA) results
-│   └── power_analysis.png      # Estimated power consumption
-├── docs/                       # Technical Specifications
-│   └── smith_waterman_spec.pdf # Mathematical basis and algorithmic constraints
-├── .gitignore                  # Simulation artifact exclusion
-└── README.md                   # Project documentation
+├── rtl/                        
+│   ├── Top.v                   
+│   ├── PE.v                    
+│   ├── Max.v                   
+│   └── Genvar_wrapper.v        
+├── tb/                         
+│   ├── Top_tb.v                
+│   └── mem/                    
+│       ├── seq1.mem            
+│       └── seq2.mem           
+├── reports/                   
+│   ├── timing_report.png      
+│   └── power_analysis.png      
+├── docs/                       
+│   └── smith_waterman_spec.pdf 
+├── .gitignore                  
+└── README.md                   
 ```
 
 ---
