@@ -1,0 +1,28 @@
+# --- Simulation Artifacts ---
+# Ignores all waveform dumps and compiled simulation binaries in any directory
+**/*.vcd
+**/*.vvp
+**/*.shm/
+**/*.dsn
+**/*.trn
+
+# --- Compiled Executables ---
+# This catches that "Type: File" junk (usually named 'a.out' or 'simv')
+**/a.out
+**/simv
+**/csrc/
+
+# --- Tool Specific Junk (Vivado/Quartus/Intel) ---
+# Ignores logs, journals, and temporary directories
+**/*.log
+**/*.jou
+**/*.str
+**/*.pb
+**/*.dir/
+**/.Xil/
+**/obj_dir/
+**/*.bak
+
+# --- System & OS Junk ---
+.DS_Store
+Thumbs.db
