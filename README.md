@@ -54,6 +54,12 @@ helix-100/
 ## Verification and Simulation
 The design is verified using Icarus Verilog and GTKWave. The testbench initializes internal memories with genetic data and monitors the `done` signal to validate the final peak alignment score against a software-defined golden model.
 
+### Synthesis and Implementation
+The `rtl/Top.v` module is optimized for synthesis using FPGA Block RAM (BRAM). For implementation on hardware:
+1. Ensure `constraints/constraints.xdc` is included in the Vivado project.
+2. The design targets a 100MHz system clock with a 10ns period.
+3. Post-synthesis reports for timing and power are available in the `/reports` directory.
+
 ### Execution Instructions:
 1.  Navigate to the project root.
 2.  Compile the source files:
